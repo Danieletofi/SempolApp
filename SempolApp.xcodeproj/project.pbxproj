@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD2F5EFA99AA4408DAFDBD0 /* card_2_ciglio.png in Resources */ = {isa = PBXBuildFile; fileRef = A31726735ABFC45D4A16DC8 /* card_2_ciglio.png */; };
+		A1B9E9E147B0A4FD1838755 /* card_2_bocca.png in Resources */ = {isa = PBXBuildFile; fileRef = AEA440063917E4BF587EAA2 /* card_2_bocca.png */; };
+		A711E7DD40EFE4B85BB6AB8 /* card_2_orecchio_dx.png in Resources */ = {isa = PBXBuildFile; fileRef = A512868DBDED94A78A217EA /* card_2_orecchio_dx.png */; };
+		AB71D321AF1A64C94968BF7 /* card_2_base.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF2680DFECA141C1A37F1B /* card_2_base.png */; };
+		A4704244EB1184AC5BBA475 /* card_2_occhio_sx.png in Resources */ = {isa = PBXBuildFile; fileRef = A8E357BC4D7BB474B949FFF /* card_2_occhio_sx.png */; };
+		A6612413C06A0455BB47A95 /* card_2_naso.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EBE9B16DA84BF3AC9E30 /* card_2_naso.png */; };
+		A64E83B8B6C4F494BB36DDA /* card_2_occhio_dx.png in Resources */ = {isa = PBXBuildFile; fileRef = A393FEB2A08DD4BAE83F98B /* card_2_occhio_dx.png */; };
+		A814DA41514F042B180D2F9 /* card_2_orecchio_sx.png in Resources */ = {isa = PBXBuildFile; fileRef = A6CB400E881FE497A832441 /* card_2_orecchio_sx.png */; };
+		A35B66917D4874DF981AF36 /* card_1_naso.png in Resources */ = {isa = PBXBuildFile; fileRef = A36BB3AF3573243DC802F4B /* card_1_naso.png */; };
+		AA939A1430D45487F82A6E3 /* card_1_capelli.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C3517F2DACE459CA925E9 /* card_1_capelli.png */; };
+		AC32A8F3D53FE4120A338F8 /* card_1_orecchio_sx.png in Resources */ = {isa = PBXBuildFile; fileRef = A1D33EFA020B04DF4AA3E27 /* card_1_orecchio_sx.png */; };
+		A7717DEE03EC3464EA68D40 /* card_1_occhio_sx.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAF2E755698645AC9FD4D2 /* card_1_occhio_sx.png */; };
+		A839AA1051A464BD9A94D81 /* card_1_orecchio_dx.png in Resources */ = {isa = PBXBuildFile; fileRef = A37F7ACC1015F4012BF5205 /* card_1_orecchio_dx.png */; };
+		A4C525C0D6C094336B7306E /* card_1_occhio_dx.png in Resources */ = {isa = PBXBuildFile; fileRef = A95C6BBFF10874784863183 /* card_1_occhio_dx.png */; };
+		A12385980D33743ACB6DF4E /* card_1_bocca.png in Resources */ = {isa = PBXBuildFile; fileRef = A8DBDE7CF6FFA474D842C0D /* card_1_bocca.png */; };
+		A1A8954F092C445FBA0836C /* card_1_sfondo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9904787662F64B8BBE6AEB /* card_1_sfondo.png */; };
+		A1FE8B0713ABC4F069E965D /* Sampol.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E840F332B9340D89F365A /* Sampol.png */; };
+		ADE17394C24674C2DB44CA6 /* card-ritratto-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B8C92E5722418995759E /* card-ritratto-1.png */; };
+		AE9D0FCACEA3348CB8F432A /* card_3_base.png in Resources */ = {isa = PBXBuildFile; fileRef = A2E221139FA4A4ACAB267B7 /* card_3_base.png */; };
+		A63F0722EFCC6452BBC4852 /* card_3_orecchio_dx.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B0217F60BD34671BD4DC6 /* card_3_orecchio_dx.png */; };
+		A9960292C6AAD436EA5A59D /* card_3_bocca.png in Resources */ = {isa = PBXBuildFile; fileRef = A3983F072040F4EFBA4693B /* card_3_bocca.png */; };
+		A4C6CD43BA7A648C7BB06D5 /* card_3_occhio_dx.png in Resources */ = {isa = PBXBuildFile; fileRef = A0985E44AC54B408EBA73AB /* card_3_occhio_dx.png */; };
+		AB3188F1C53944365BC674A /* card_3_naso.png in Resources */ = {isa = PBXBuildFile; fileRef = A93E7E954D1D14D929EC6A8 /* card_3_naso.png */; };
+		AB6997446265C40B5A54D3B /* card_3_orecchio_sx.png in Resources */ = {isa = PBXBuildFile; fileRef = AC64C436910F04B89A31AEE /* card_3_orecchio_sx.png */; };
+		A356A0896091F4D7895DEE6 /* card_3_occhio_sx.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6B7706030F84498A0E0E1 /* card_3_occhio_sx.png */; };
+		AE279D2466811405BA24B12 /* card_3_occhio_sopra.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C14C4D7AB07432DBBD841 /* card_3_occhio_sopra.png */; };
+		A5BD77C054A224592B98A6F /* Icona_traccia.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDA766A5BDC747778D31BD /* Icona_traccia.png */; };
+		AD4A9278592E14D43BE1579 /* Icona_play.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C72083E5A424BE5B9CB03 /* Icona_play.png */; };
+		AEDC78A38112F4747BEDEF4 /* Icona_freccia.png in Resources */ = {isa = PBXBuildFile; fileRef = AA36071E56B5844E9B9980D /* Icona_freccia.png */; };
+		AAB0453516E3B441492DCC2 /* Icona_pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = AA78C6899D2A34AC69D8F4A /* Icona_pausa.png */; };
+		A779A4E11C87A40CC98B563 /* Icona_card.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9CF54D2D95F4A0483EA40 /* Icona_card.png */; };
+		A85428724F8B44A499AE2B3 /* suono-elfo-orecchio-dx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ABF10F61DA8CF4FC1974FF8 /* suono-elfo-orecchio-dx.mp3 */; };
+		A0E5A35DDB79D4FA8B97091 /* suono-elfo-occhio-sx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A670B6F09CA444963AE7FC6 /* suono-elfo-occhio-sx.mp3 */; };
+		AD29C7690402D4004B21BB1 /* suono-elfo-orecchio-sx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE0A5214948A34346B375C3 /* suono-elfo-orecchio-sx.mp3 */; };
+		A8D98295810EF4F9691464A /* suono-elfo-bocca.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ADBDEF6E00A3C45E5A10666 /* suono-elfo-bocca.mp3 */; };
+		A728A98F5C5E34E06AED5D6 /* suono-elfo-capelli.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A259B707D7BC84761AD433A /* suono-elfo-capelli.mp3 */; };
+		A13EF7C8FF5474BCDB04234 /* suono-elfo-occhio-dx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6F9C47CD03C140FEA40F12 /* suono-elfo-occhio-dx.mp3 */; };
+		AEF2A8C1DCBBE433CAA2F1E /* suono-elfo-naso.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5CC80A43D0D1458AA0E24A /* suono-elfo-naso.mp3 */; };
+		A33DEEABB9B0649C38993F0 /* Downtown-base.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A2D8240D62E584C1483F801 /* Downtown-base.mp3 */; };
+		AA000001ASSETS /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000002ASSETS /* Assets.xcassets */; };
+		P000001LAYOUT /* PortraitLayout.json in Resources */ = {isa = PBXBuildFile; fileRef = P000002LAYOUT /* PortraitLayout.json */; };
+
+		A1000001 /* SempolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002 /* SempolApp.swift */; };
+		A1000003 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000004 /* RootView.swift */; };
+		A1000005 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000006 /* HomeView.swift */; };
+		A1000007 /* ElfPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000008 /* ElfPlayView.swift */; };
+		A1000009 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000010 /* AudioManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A31726735ABFC45D4A16DC8 /* card_2_ciglio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_ciglio.png"; path = "Asset/Card_ritratto_2/card_2_ciglio.png"; sourceTree = "<group>"; };
+		AEA440063917E4BF587EAA2 /* card_2_bocca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_bocca.png"; path = "Asset/Card_ritratto_2/card_2_bocca.png"; sourceTree = "<group>"; };
+		A512868DBDED94A78A217EA /* card_2_orecchio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_orecchio_dx.png"; path = "Asset/Card_ritratto_2/card_2_orecchio_dx.png"; sourceTree = "<group>"; };
+		ADF2680DFECA141C1A37F1B /* card_2_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_base.png"; path = "Asset/Card_ritratto_2/card_2_base.png"; sourceTree = "<group>"; };
+		A8E357BC4D7BB474B949FFF /* card_2_occhio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_occhio_sx.png"; path = "Asset/Card_ritratto_2/card_2_occhio_sx.png"; sourceTree = "<group>"; };
+		AD3EBE9B16DA84BF3AC9E30 /* card_2_naso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_naso.png"; path = "Asset/Card_ritratto_2/card_2_naso.png"; sourceTree = "<group>"; };
+		A393FEB2A08DD4BAE83F98B /* card_2_occhio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_occhio_dx.png"; path = "Asset/Card_ritratto_2/card_2_occhio_dx.png"; sourceTree = "<group>"; };
+		A6CB400E881FE497A832441 /* card_2_orecchio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_orecchio_sx.png"; path = "Asset/Card_ritratto_2/card_2_orecchio_sx.png"; sourceTree = "<group>"; };
+		A36BB3AF3573243DC802F4B /* card_1_naso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_naso.png"; path = "Asset/Card_ritratto_elfo/card_1_naso.png"; sourceTree = "<group>"; };
+		A9C3517F2DACE459CA925E9 /* card_1_capelli.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_capelli.png"; path = "Asset/Card_ritratto_elfo/card_1_capelli.png"; sourceTree = "<group>"; };
+		A1D33EFA020B04DF4AA3E27 /* card_1_orecchio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_orecchio_sx.png"; path = "Asset/Card_ritratto_elfo/card_1_orecchio_sx.png"; sourceTree = "<group>"; };
+		ACAF2E755698645AC9FD4D2 /* card_1_occhio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_occhio_sx.png"; path = "Asset/Card_ritratto_elfo/card_1_occhio_sx.png"; sourceTree = "<group>"; };
+		A37F7ACC1015F4012BF5205 /* card_1_orecchio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_orecchio_dx.png"; path = "Asset/Card_ritratto_elfo/card_1_orecchio_dx.png"; sourceTree = "<group>"; };
+		A95C6BBFF10874784863183 /* card_1_occhio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_occhio_dx.png"; path = "Asset/Card_ritratto_elfo/card_1_occhio_dx.png"; sourceTree = "<group>"; };
+		A8DBDE7CF6FFA474D842C0D /* card_1_bocca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_bocca.png"; path = "Asset/Card_ritratto_elfo/card_1_bocca.png"; sourceTree = "<group>"; };
+		A9904787662F64B8BBE6AEB /* card_1_sfondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_sfondo.png"; path = "Asset/Card_ritratto_elfo/card_1_sfondo.png"; sourceTree = "<group>"; };
+		A1E840F332B9340D89F365A /* Sampol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sampol.png"; path = "Asset/Loghi/Sampol.png"; sourceTree = "<group>"; };
+		A58B8C92E5722418995759E /* card-ritratto-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-ritratto-1.png"; path = "Asset/Card_preview/card-ritratto-1.png"; sourceTree = "<group>"; };
+		A2E221139FA4A4ACAB267B7 /* card_3_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_base.png"; path = "Asset/Card_ritrato_3/card_3_base.png"; sourceTree = "<group>"; };
+		A4B0217F60BD34671BD4DC6 /* card_3_orecchio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_orecchio_dx.png"; path = "Asset/Card_ritrato_3/card_3_orecchio_dx.png"; sourceTree = "<group>"; };
+		A3983F072040F4EFBA4693B /* card_3_bocca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_bocca.png"; path = "Asset/Card_ritrato_3/card_3_bocca.png"; sourceTree = "<group>"; };
+		A0985E44AC54B408EBA73AB /* card_3_occhio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_occhio_dx.png"; path = "Asset/Card_ritrato_3/card_3_occhio_dx.png"; sourceTree = "<group>"; };
+		A93E7E954D1D14D929EC6A8 /* card_3_naso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_naso.png"; path = "Asset/Card_ritrato_3/card_3_naso.png"; sourceTree = "<group>"; };
+		AC64C436910F04B89A31AEE /* card_3_orecchio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_orecchio_sx.png"; path = "Asset/Card_ritrato_3/card_3_orecchio_sx.png"; sourceTree = "<group>"; };
+		AF6B7706030F84498A0E0E1 /* card_3_occhio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_occhio_sx.png"; path = "Asset/Card_ritrato_3/card_3_occhio_sx.png"; sourceTree = "<group>"; };
+		A7C14C4D7AB07432DBBD841 /* card_3_occhio_sopra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_occhio_sopra.png"; path = "Asset/Card_ritrato_3/card_3_occhio_sopra.png"; sourceTree = "<group>"; };
+		ACDA766A5BDC747778D31BD /* Icona_traccia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icona_traccia.png"; path = "Asset/User_interface_icone/Icona_traccia.png"; sourceTree = "<group>"; };
+		A7C72083E5A424BE5B9CB03 /* Icona_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icona_play.png"; path = "Asset/User_interface_icone/Icona_play.png"; sourceTree = "<group>"; };
+		AA36071E56B5844E9B9980D /* Icona_freccia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icona_freccia.png"; path = "Asset/User_interface_icone/Icona_freccia.png"; sourceTree = "<group>"; };
+		AA78C6899D2A34AC69D8F4A /* Icona_pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icona_pausa.png"; path = "Asset/User_interface_icone/Icona_pausa.png"; sourceTree = "<group>"; };
+		AB9CF54D2D95F4A0483EA40 /* Icona_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icona_card.png"; path = "Asset/User_interface_icone/Icona_card.png"; sourceTree = "<group>"; };
+		ABF10F61DA8CF4FC1974FF8 /* suono-elfo-orecchio-dx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "suono-elfo-orecchio-dx.mp3"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_elfo/suono-elfo-orecchio-dx.mp3"; sourceTree = "<group>"; };
+		A670B6F09CA444963AE7FC6 /* suono-elfo-occhio-sx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "suono-elfo-occhio-sx.mp3"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_elfo/suono-elfo-occhio-sx.mp3"; sourceTree = "<group>"; };
+		AE0A5214948A34346B375C3 /* suono-elfo-orecchio-sx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "suono-elfo-orecchio-sx.mp3"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_elfo/suono-elfo-orecchio-sx.mp3"; sourceTree = "<group>"; };
+		ADBDEF6E00A3C45E5A10666 /* suono-elfo-bocca.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "suono-elfo-bocca.mp3"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_elfo/suono-elfo-bocca.mp3"; sourceTree = "<group>"; };
+		A259B707D7BC84761AD433A /* suono-elfo-capelli.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "suono-elfo-capelli.mp3"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_elfo/suono-elfo-capelli.mp3"; sourceTree = "<group>"; };
+		A6F9C47CD03C140FEA40F12 /* suono-elfo-occhio-dx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "suono-elfo-occhio-dx.mp3"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_elfo/suono-elfo-occhio-dx.mp3"; sourceTree = "<group>"; };
+		A5CC80A43D0D1458AA0E24A /* suono-elfo-naso.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "suono-elfo-naso.mp3"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_elfo/suono-elfo-naso.mp3"; sourceTree = "<group>"; };
+		A2D8240D62E584C1483F801 /* Downtown-base.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Downtown-base.mp3"; path = "Suoni/Basi_musicali/Downtown-base.mp3"; sourceTree = "<group>"; };
+
+
+		A1000002 /* SempolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SempolApp.swift; sourceTree = "<group>"; };
+		A1000004 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		A1000006 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A1000008 /* ElfPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElfPlayView.swift; sourceTree = "<group>"; };
+		A1000010 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		A1000011 /* SempolApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SempolApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA000002ASSETS /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		P000002LAYOUT /* PortraitLayout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PortraitLayout.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1000012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1000013 = {
+			isa = PBXGroup;
+			children = (
+				A1000014 /* SempolApp */,
+				A1000015 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1000014 /* SempolApp */ = {
+			isa = PBXGroup;
+			children = (
+				AA000002ASSETS /* Assets.xcassets */,
+				A1000002 /* SempolApp.swift */,
+				A1000004 /* RootView.swift */,
+				A1000006 /* HomeView.swift */,
+				A1000008 /* ElfPlayView.swift */,
+				A1000010 /* AudioManager.swift */,
+				P000002LAYOUT /* PortraitLayout.json */,
+				A31726735ABFC45D4A16DC8 /* card_2_ciglio.png */,
+				AEA440063917E4BF587EAA2 /* card_2_bocca.png */,
+				A512868DBDED94A78A217EA /* card_2_orecchio_dx.png */,
+				ADF2680DFECA141C1A37F1B /* card_2_base.png */,
+				A8E357BC4D7BB474B949FFF /* card_2_occhio_sx.png */,
+				AD3EBE9B16DA84BF3AC9E30 /* card_2_naso.png */,
+				A393FEB2A08DD4BAE83F98B /* card_2_occhio_dx.png */,
+				A6CB400E881FE497A832441 /* card_2_orecchio_sx.png */,
+				A36BB3AF3573243DC802F4B /* card_1_naso.png */,
+				A9C3517F2DACE459CA925E9 /* card_1_capelli.png */,
+				A1D33EFA020B04DF4AA3E27 /* card_1_orecchio_sx.png */,
+				ACAF2E755698645AC9FD4D2 /* card_1_occhio_sx.png */,
+				A37F7ACC1015F4012BF5205 /* card_1_orecchio_dx.png */,
+				A95C6BBFF10874784863183 /* card_1_occhio_dx.png */,
+				A8DBDE7CF6FFA474D842C0D /* card_1_bocca.png */,
+				A9904787662F64B8BBE6AEB /* card_1_sfondo.png */,
+				A1E840F332B9340D89F365A /* Sampol.png */,
+				A58B8C92E5722418995759E /* card-ritratto-1.png */,
+				A2E221139FA4A4ACAB267B7 /* card_3_base.png */,
+				A4B0217F60BD34671BD4DC6 /* card_3_orecchio_dx.png */,
+				A3983F072040F4EFBA4693B /* card_3_bocca.png */,
+				A0985E44AC54B408EBA73AB /* card_3_occhio_dx.png */,
+				A93E7E954D1D14D929EC6A8 /* card_3_naso.png */,
+				AC64C436910F04B89A31AEE /* card_3_orecchio_sx.png */,
+				AF6B7706030F84498A0E0E1 /* card_3_occhio_sx.png */,
+				A7C14C4D7AB07432DBBD841 /* card_3_occhio_sopra.png */,
+				ACDA766A5BDC747778D31BD /* Icona_traccia.png */,
+				A7C72083E5A424BE5B9CB03 /* Icona_play.png */,
+				AA36071E56B5844E9B9980D /* Icona_freccia.png */,
+				AA78C6899D2A34AC69D8F4A /* Icona_pausa.png */,
+				AB9CF54D2D95F4A0483EA40 /* Icona_card.png */,
+				ABF10F61DA8CF4FC1974FF8 /* suono-elfo-orecchio-dx.mp3 */,
+				A670B6F09CA444963AE7FC6 /* suono-elfo-occhio-sx.mp3 */,
+				AE0A5214948A34346B375C3 /* suono-elfo-orecchio-sx.mp3 */,
+				ADBDEF6E00A3C45E5A10666 /* suono-elfo-bocca.mp3 */,
+				A259B707D7BC84761AD433A /* suono-elfo-capelli.mp3 */,
+				A6F9C47CD03C140FEA40F12 /* suono-elfo-occhio-dx.mp3 */,
+				A5CC80A43D0D1458AA0E24A /* suono-elfo-naso.mp3 */,
+				A2D8240D62E584C1483F801 /* Downtown-base.mp3 */,
+			);
+			path = SempolApp;
+			sourceTree = "<group>";
+		};
+		A1000015 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1000011 /* SempolApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1000016 /* SempolApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1000017 /* Build configuration list for PBXNativeTarget "SempolApp" */;
+			buildPhases = (
+				A1000018 /* Sources */,
+				A1000012 /* Frameworks */,
+				A1000019 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SempolApp;
+			productName = SempolApp;
+			productReference = A1000011 /* SempolApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1000020 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = A1000021 /* Build configuration list for PBXProject "SempolApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1000013;
+			productRefGroup = A1000015 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1000016 /* SempolApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1000019 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD2F5EFA99AA4408DAFDBD0 /* card_2_ciglio.png in Resources */,
+				A1B9E9E147B0A4FD1838755 /* card_2_bocca.png in Resources */,
+				A711E7DD40EFE4B85BB6AB8 /* card_2_orecchio_dx.png in Resources */,
+				AB71D321AF1A64C94968BF7 /* card_2_base.png in Resources */,
+				A4704244EB1184AC5BBA475 /* card_2_occhio_sx.png in Resources */,
+				A6612413C06A0455BB47A95 /* card_2_naso.png in Resources */,
+				A64E83B8B6C4F494BB36DDA /* card_2_occhio_dx.png in Resources */,
+				A814DA41514F042B180D2F9 /* card_2_orecchio_sx.png in Resources */,
+				A35B66917D4874DF981AF36 /* card_1_naso.png in Resources */,
+				AA939A1430D45487F82A6E3 /* card_1_capelli.png in Resources */,
+				AC32A8F3D53FE4120A338F8 /* card_1_orecchio_sx.png in Resources */,
+				A7717DEE03EC3464EA68D40 /* card_1_occhio_sx.png in Resources */,
+				A839AA1051A464BD9A94D81 /* card_1_orecchio_dx.png in Resources */,
+				A4C525C0D6C094336B7306E /* card_1_occhio_dx.png in Resources */,
+				A12385980D33743ACB6DF4E /* card_1_bocca.png in Resources */,
+				A1A8954F092C445FBA0836C /* card_1_sfondo.png in Resources */,
+				A1FE8B0713ABC4F069E965D /* Sampol.png in Resources */,
+				ADE17394C24674C2DB44CA6 /* card-ritratto-1.png in Resources */,
+				AE9D0FCACEA3348CB8F432A /* card_3_base.png in Resources */,
+				A63F0722EFCC6452BBC4852 /* card_3_orecchio_dx.png in Resources */,
+				A9960292C6AAD436EA5A59D /* card_3_bocca.png in Resources */,
+				A4C6CD43BA7A648C7BB06D5 /* card_3_occhio_dx.png in Resources */,
+				AB3188F1C53944365BC674A /* card_3_naso.png in Resources */,
+				AB6997446265C40B5A54D3B /* card_3_orecchio_sx.png in Resources */,
+				A356A0896091F4D7895DEE6 /* card_3_occhio_sx.png in Resources */,
+				AE279D2466811405BA24B12 /* card_3_occhio_sopra.png in Resources */,
+				A5BD77C054A224592B98A6F /* Icona_traccia.png in Resources */,
+				AD4A9278592E14D43BE1579 /* Icona_play.png in Resources */,
+				AEDC78A38112F4747BEDEF4 /* Icona_freccia.png in Resources */,
+				AAB0453516E3B441492DCC2 /* Icona_pausa.png in Resources */,
+				A779A4E11C87A40CC98B563 /* Icona_card.png in Resources */,
+				A85428724F8B44A499AE2B3 /* suono-elfo-orecchio-dx.mp3 in Resources */,
+				A0E5A35DDB79D4FA8B97091 /* suono-elfo-occhio-sx.mp3 in Resources */,
+				AD29C7690402D4004B21BB1 /* suono-elfo-orecchio-sx.mp3 in Resources */,
+				A8D98295810EF4F9691464A /* suono-elfo-bocca.mp3 in Resources */,
+				A728A98F5C5E34E06AED5D6 /* suono-elfo-capelli.mp3 in Resources */,
+				A13EF7C8FF5474BCDB04234 /* suono-elfo-occhio-dx.mp3 in Resources */,
+				AEF2A8C1DCBBE433CAA2F1E /* suono-elfo-naso.mp3 in Resources */,
+				A33DEEABB9B0649C38993F0 /* Downtown-base.mp3 in Resources */,
+				AA000001ASSETS /* Assets.xcassets in Resources */,
+				P000001LAYOUT /* PortraitLayout.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1000018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001 /* SempolApp.swift in Sources */,
+				A1000003 /* RootView.swift in Sources */,
+				A1000005 /* HomeView.swift in Sources */,
+				A1000007 /* ElfPlayView.swift in Sources */,
+				A1000009 /* AudioManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A1000022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER = "apple";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1000023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER = "apple";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1000024 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_UIColorName = LaunchScreenBackground;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sempol.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A1000025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_UIColorName = LaunchScreenBackground;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sempol.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1000017 /* Build configuration list for PBXNativeTarget "SempolApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1000024 /* Debug */,
+				A1000025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1000021 /* Build configuration list for PBXProject "SempolApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1000022 /* Debug */,
+				A1000023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1000020 /* Project object */;
+}
