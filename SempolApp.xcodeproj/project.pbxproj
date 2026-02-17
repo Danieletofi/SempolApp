@@ -48,8 +48,15 @@
 		A33DEEABB9B0649C38993F0 /* Downtown-base.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A2D8240D62E584C1483F801 /* Downtown-base.mp3 */; };
 		AA000001ASSETS /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000002ASSETS /* Assets.xcassets */; };
 		P000001LAYOUT /* PortraitLayout.json in Resources */ = {isa = PBXBuildFile; fileRef = P000002LAYOUT /* PortraitLayout.json */; };
+		H0000001ELFO /* card-ritratto-Elfo.png in Resources */ = {isa = PBXBuildFile; fileRef = H0000002ELFO /* card-ritratto-Elfo.png */; };
+		H0000003GREM /* card-ritratto-Gremlin.png in Resources */ = {isa = PBXBuildFile; fileRef = H0000004GREM /* card-ritratto-Gremlin.png */; };
+		H0000005ORCO /* card-ritratto-Orco.png in Resources */ = {isa = PBXBuildFile; fileRef = H0000006ORCO /* card-ritratto-Orco.png */; };
+		H0000007CRED /* Sampol_illustrazione_credits.png in Resources */ = {isa = PBXBuildFile; fileRef = H0000008CRED /* Sampol_illustrazione_credits.png */; };
+		F0000001FONT /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0000002FONT /* Quicksand-Medium.ttf */; };
+		F0000003FONT /* CherryBombOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0000004FONT /* CherryBombOne-Regular.ttf */; };
 
 		A1000001 /* SempolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002 /* SempolApp.swift */; };
+		F0000005FONT /* Font+AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000006FONT /* Font+AppFonts.swift */; };
 		A1000003 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000004 /* RootView.swift */; };
 		A1000005 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000006 /* HomeView.swift */; };
 		A1000007 /* ElfPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000008 /* ElfPlayView.swift */; };
@@ -57,14 +64,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A31726735ABFC45D4A16DC8 /* card_2_ciglio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_ciglio.png"; path = "Asset/Card_ritratto_2/card_2_ciglio.png"; sourceTree = "<group>"; };
-		AEA440063917E4BF587EAA2 /* card_2_bocca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_bocca.png"; path = "Asset/Card_ritratto_2/card_2_bocca.png"; sourceTree = "<group>"; };
-		A512868DBDED94A78A217EA /* card_2_orecchio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_orecchio_dx.png"; path = "Asset/Card_ritratto_2/card_2_orecchio_dx.png"; sourceTree = "<group>"; };
-		ADF2680DFECA141C1A37F1B /* card_2_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_base.png"; path = "Asset/Card_ritratto_2/card_2_base.png"; sourceTree = "<group>"; };
-		A8E357BC4D7BB474B949FFF /* card_2_occhio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_occhio_sx.png"; path = "Asset/Card_ritratto_2/card_2_occhio_sx.png"; sourceTree = "<group>"; };
-		AD3EBE9B16DA84BF3AC9E30 /* card_2_naso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_naso.png"; path = "Asset/Card_ritratto_2/card_2_naso.png"; sourceTree = "<group>"; };
-		A393FEB2A08DD4BAE83F98B /* card_2_occhio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_occhio_dx.png"; path = "Asset/Card_ritratto_2/card_2_occhio_dx.png"; sourceTree = "<group>"; };
-		A6CB400E881FE497A832441 /* card_2_orecchio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_orecchio_sx.png"; path = "Asset/Card_ritratto_2/card_2_orecchio_sx.png"; sourceTree = "<group>"; };
+		A31726735ABFC45D4A16DC8 /* card_2_ciglio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_ciglio.png"; path = "Asset/Card_ritratto_gremlin/card_2_ciglio.png"; sourceTree = "<group>"; };
+		AEA440063917E4BF587EAA2 /* card_2_bocca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_bocca.png"; path = "Asset/Card_ritratto_gremlin/card_2_bocca.png"; sourceTree = "<group>"; };
+		A512868DBDED94A78A217EA /* card_2_orecchio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_orecchio_dx.png"; path = "Asset/Card_ritratto_gremlin/card_2_orecchio_dx.png"; sourceTree = "<group>"; };
+		ADF2680DFECA141C1A37F1B /* card_2_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_base.png"; path = "Asset/Card_ritratto_gremlin/card_2_base.png"; sourceTree = "<group>"; };
+		A8E357BC4D7BB474B949FFF /* card_2_occhio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_occhio_sx.png"; path = "Asset/Card_ritratto_gremlin/card_2_occhio_sx.png"; sourceTree = "<group>"; };
+		AD3EBE9B16DA84BF3AC9E30 /* card_2_naso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_naso.png"; path = "Asset/Card_ritratto_gremlin/card_2_naso.png"; sourceTree = "<group>"; };
+		A393FEB2A08DD4BAE83F98B /* card_2_occhio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_occhio_dx.png"; path = "Asset/Card_ritratto_gremlin/card_2_occhio_dx.png"; sourceTree = "<group>"; };
+		A6CB400E881FE497A832441 /* card_2_orecchio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_2_orecchio_sx.png"; path = "Asset/Card_ritratto_gremlin/card_2_orecchio_sx.png"; sourceTree = "<group>"; };
 		A36BB3AF3573243DC802F4B /* card_1_naso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_naso.png"; path = "Asset/Card_ritratto_elfo/card_1_naso.png"; sourceTree = "<group>"; };
 		A9C3517F2DACE459CA925E9 /* card_1_capelli.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_capelli.png"; path = "Asset/Card_ritratto_elfo/card_1_capelli.png"; sourceTree = "<group>"; };
 		A1D33EFA020B04DF4AA3E27 /* card_1_orecchio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_orecchio_sx.png"; path = "Asset/Card_ritratto_elfo/card_1_orecchio_sx.png"; sourceTree = "<group>"; };
@@ -75,14 +82,14 @@
 		A9904787662F64B8BBE6AEB /* card_1_sfondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_1_sfondo.png"; path = "Asset/Card_ritratto_elfo/card_1_sfondo.png"; sourceTree = "<group>"; };
 		A1E840F332B9340D89F365A /* Sampol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sampol.png"; path = "Asset/Loghi/Sampol.png"; sourceTree = "<group>"; };
 		A58B8C92E5722418995759E /* card-ritratto-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-ritratto-1.png"; path = "Asset/Card_preview/card-ritratto-1.png"; sourceTree = "<group>"; };
-		A2E221139FA4A4ACAB267B7 /* card_3_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_base.png"; path = "Asset/Card_ritrato_3/card_3_base.png"; sourceTree = "<group>"; };
-		A4B0217F60BD34671BD4DC6 /* card_3_orecchio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_orecchio_dx.png"; path = "Asset/Card_ritrato_3/card_3_orecchio_dx.png"; sourceTree = "<group>"; };
-		A3983F072040F4EFBA4693B /* card_3_bocca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_bocca.png"; path = "Asset/Card_ritrato_3/card_3_bocca.png"; sourceTree = "<group>"; };
-		A0985E44AC54B408EBA73AB /* card_3_occhio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_occhio_dx.png"; path = "Asset/Card_ritrato_3/card_3_occhio_dx.png"; sourceTree = "<group>"; };
-		A93E7E954D1D14D929EC6A8 /* card_3_naso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_naso.png"; path = "Asset/Card_ritrato_3/card_3_naso.png"; sourceTree = "<group>"; };
-		AC64C436910F04B89A31AEE /* card_3_orecchio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_orecchio_sx.png"; path = "Asset/Card_ritrato_3/card_3_orecchio_sx.png"; sourceTree = "<group>"; };
-		AF6B7706030F84498A0E0E1 /* card_3_occhio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_occhio_sx.png"; path = "Asset/Card_ritrato_3/card_3_occhio_sx.png"; sourceTree = "<group>"; };
-		A7C14C4D7AB07432DBBD841 /* card_3_occhio_sopra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_occhio_sopra.png"; path = "Asset/Card_ritrato_3/card_3_occhio_sopra.png"; sourceTree = "<group>"; };
+		A2E221139FA4A4ACAB267B7 /* card_3_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_base.png"; path = "Asset/Card_ritrato_orco/card_3_base.png"; sourceTree = "<group>"; };
+		A4B0217F60BD34671BD4DC6 /* card_3_orecchio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_orecchio_dx.png"; path = "Asset/Card_ritrato_orco/card_3_orecchio_dx.png"; sourceTree = "<group>"; };
+		A3983F072040F4EFBA4693B /* card_3_bocca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_bocca.png"; path = "Asset/Card_ritrato_orco/card_3_bocca.png"; sourceTree = "<group>"; };
+		A0985E44AC54B408EBA73AB /* card_3_occhio_dx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_occhio_dx.png"; path = "Asset/Card_ritrato_orco/card_3_occhio_dx.png"; sourceTree = "<group>"; };
+		A93E7E954D1D14D929EC6A8 /* card_3_naso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_naso.png"; path = "Asset/Card_ritrato_orco/card_3_naso.png"; sourceTree = "<group>"; };
+		AC64C436910F04B89A31AEE /* card_3_orecchio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_orecchio_sx.png"; path = "Asset/Card_ritrato_orco/card_3_orecchio_sx.png"; sourceTree = "<group>"; };
+		AF6B7706030F84498A0E0E1 /* card_3_occhio_sx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_occhio_sx.png"; path = "Asset/Card_ritrato_orco/card_3_occhio_sx.png"; sourceTree = "<group>"; };
+		A7C14C4D7AB07432DBBD841 /* card_3_occhio_sopra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card_3_occhio_sopra.png"; path = "Asset/Card_ritrato_orco/card_3_occhio_sopra.png"; sourceTree = "<group>"; };
 		ACDA766A5BDC747778D31BD /* Icona_traccia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icona_traccia.png"; path = "Asset/User_interface_icone/Icona_traccia.png"; sourceTree = "<group>"; };
 		A7C72083E5A424BE5B9CB03 /* Icona_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icona_play.png"; path = "Asset/User_interface_icone/Icona_play.png"; sourceTree = "<group>"; };
 		AA36071E56B5844E9B9980D /* Icona_freccia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icona_freccia.png"; path = "Asset/User_interface_icone/Icona_freccia.png"; sourceTree = "<group>"; };
@@ -106,6 +113,14 @@
 		A1000011 /* SempolApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SempolApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA000002ASSETS /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		P000002LAYOUT /* PortraitLayout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PortraitLayout.json; sourceTree = "<group>"; };
+		H0000002ELFO /* card-ritratto-Elfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-ritratto-Elfo.png"; path = "Asset/Card_preview/card-ritratto-Elfo.png"; sourceTree = "<group>"; };
+		H0000004GREM /* card-ritratto-Gremlin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-ritratto-Gremlin.png"; path = "Asset/Card_preview/card-ritratto-Gremlin.png"; sourceTree = "<group>"; };
+		H0000006ORCO /* card-ritratto-Orco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-ritratto-Orco.png"; path = "Asset/Card_preview/card-ritratto-Orco.png"; sourceTree = "<group>"; };
+		H0000008CRED /* Sampol_illustrazione_credits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sampol_illustrazione_credits.png"; path = "Asset/Credits_illustrazione/Sampol_illustrazione_credits.png"; sourceTree = "<group>"; };
+		F0000002FONT /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		F0000004FONT /* CherryBombOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CherryBombOne-Regular.ttf"; path = "CherryBombOne-Regular.ttf"; sourceTree = "<group>"; };
+		F0000006FONT /* Font+AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+AppFonts.swift"; sourceTree = "<group>"; };
+		F0000007INFO /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +145,11 @@
 		A1000014 /* SempolApp */ = {
 			isa = PBXGroup;
 			children = (
+				F0000007INFO /* Info.plist */,
 				AA000002ASSETS /* Assets.xcassets */,
+				F0000008FONT /* Fonts */,
 				A1000002 /* SempolApp.swift */,
+				F0000006FONT /* Font+AppFonts.swift */,
 				A1000004 /* RootView.swift */,
 				A1000006 /* HomeView.swift */,
 				A1000008 /* ElfPlayView.swift */,
@@ -176,8 +194,21 @@
 				A6F9C47CD03C140FEA40F12 /* suono-elfo-occhio-dx.mp3 */,
 				A5CC80A43D0D1458AA0E24A /* suono-elfo-naso.mp3 */,
 				A2D8240D62E584C1483F801 /* Downtown-base.mp3 */,
+				H0000002ELFO /* card-ritratto-Elfo.png */,
+				H0000004GREM /* card-ritratto-Gremlin.png */,
+				H0000006ORCO /* card-ritratto-Orco.png */,
+				H0000008CRED /* Sampol_illustrazione_credits.png */,
 			);
 			path = SempolApp;
+			sourceTree = "<group>";
+		};
+		F0000008FONT /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F0000002FONT /* Quicksand-Medium.ttf */,
+				F0000004FONT /* CherryBombOne-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		A1000015 /* Products */ = {
@@ -283,6 +314,12 @@
 				A33DEEABB9B0649C38993F0 /* Downtown-base.mp3 in Resources */,
 				AA000001ASSETS /* Assets.xcassets in Resources */,
 				P000001LAYOUT /* PortraitLayout.json in Resources */,
+				H0000001ELFO /* card-ritratto-Elfo.png in Resources */,
+				H0000003GREM /* card-ritratto-Gremlin.png in Resources */,
+				H0000005ORCO /* card-ritratto-Orco.png in Resources */,
+				H0000007CRED /* Sampol_illustrazione_credits.png in Resources */,
+				F0000001FONT /* Quicksand-Medium.ttf in Resources */,
+				F0000003FONT /* CherryBombOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +335,7 @@
 				A1000005 /* HomeView.swift in Sources */,
 				A1000007 /* ElfPlayView.swift in Sources */,
 				A1000009 /* AudioManager.swift in Sources */,
+				F0000005FONT /* Font+AppFonts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +471,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SempolApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,6 +505,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SempolApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
