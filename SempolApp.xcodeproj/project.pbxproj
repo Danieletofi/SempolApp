@@ -61,6 +61,8 @@
 		A1000005 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000006 /* HomeView.swift */; };
 		A1000007 /* ElfPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000008 /* ElfPlayView.swift */; };
 		A1000009 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000010 /* AudioManager.swift */; };
+		M0000001MARC /* MusicArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = M0000002MARC /* MusicArchiveView.swift */; };
+		H0000011HDSH /* HandDrawnShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = H0000012HDSH /* HandDrawnShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +123,8 @@
 		F0000004FONT /* CherryBombOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CherryBombOne-Regular.ttf"; path = "CherryBombOne-Regular.ttf"; sourceTree = "<group>"; };
 		F0000006FONT /* Font+AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+AppFonts.swift"; sourceTree = "<group>"; };
 		F0000007INFO /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		M0000002MARC /* MusicArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicArchiveView.swift; sourceTree = "<group>"; };
+		H0000012HDSH /* HandDrawnShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandDrawnShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 				A1000006 /* HomeView.swift */,
 				A1000008 /* ElfPlayView.swift */,
 				A1000010 /* AudioManager.swift */,
+				M0000002MARC /* MusicArchiveView.swift */,
+				H0000012HDSH /* HandDrawnShape.swift */,
 				P000002LAYOUT /* PortraitLayout.json */,
 				A31726735ABFC45D4A16DC8 /* card_2_ciglio.png */,
 				AEA440063917E4BF587EAA2 /* card_2_bocca.png */,
@@ -336,6 +342,8 @@
 				A1000007 /* ElfPlayView.swift in Sources */,
 				A1000009 /* AudioManager.swift in Sources */,
 				F0000005FONT /* Font+AppFonts.swift in Sources */,
+				M0000001MARC /* MusicArchiveView.swift in Sources */,
+				H0000011HDSH /* HandDrawnShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

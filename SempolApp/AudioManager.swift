@@ -1,6 +1,27 @@
 import Foundation
 import AVFoundation
 
+// MARK: - Music Track model
+
+struct MusicTrack: Identifiable, Equatable {
+    let id: String
+    let title: String
+    let fileName: String
+    let fileExtension: String
+}
+
+extension MusicTrack {
+    static let allTracks: [MusicTrack] = [
+        .init(id: "downtown-base", title: "Downtown", fileName: "Downtown-base", fileExtension: "mp3"),
+        .init(id: "sunset-vibes", title: "Sunset Vibes", fileName: "Sunset-vibes", fileExtension: "mp3"),
+        .init(id: "forest-walk", title: "Forest Walk", fileName: "Forest-walk", fileExtension: "mp3")
+    ]
+
+    static let defaultTrack = allTracks[0]
+}
+
+// MARK: - Elf Sound enum
+
 /// Identifies each tappable part of the elf portrait.
 enum ElfSound: CaseIterable {
     case capelli
@@ -32,14 +53,18 @@ enum ElfSound: CaseIterable {
     }
 }
 
+// MARK: - Audio Manager
+
 /// Central audio manager: handles the looping base track and the portrait sound effects.
 final class AudioManager: ObservableObject {
     static let shared = AudioManager()
 
     // MARK: - Published state
 
-    /// Used by SwiftUI to reflect the state of the base track button (play/pause icon).
     @Published private(set) var isBasePlaying: Bool = false
+    @Published private(set) var currentTrack: MusicTrack = .defaultTrack
+
+    let availableTracks: [MusicTrack] = MusicTrack.allTracks
 
     // MARK: - Private properties
 
@@ -55,8 +80,8 @@ final class AudioManager: ObservableObject {
     /// Starts the base track if it has not been created yet, otherwise resumes it.
     func startBaseIfNeeded() {
         if basePlayer == nil {
-            basePlayer = makePlayer(fileName: "Downtown-base", fileExtension: "mp3")
-            basePlayer?.numberOfLoops = -1 // infinite loop
+            basePlayer = makePlayer(fileName: currentTrack.fileName, fileExtension: currentTrack.fileExtension)
+            basePlayer?.numberOfLoops = -1
         }
 
         guard let basePlayer else { return }
@@ -82,6 +107,28 @@ final class AudioManager: ObservableObject {
         }
     }
 
+    /// Select and switch to a different base track.
+    func selectTrack(_ track: MusicTrack) {
+        guard track != currentTrack else { return }
+
+        let wasPlaying = basePlayer?.isPlaying ?? false
+
+        basePlayer?.stop()
+        basePlayer = nil
+
+        currentTrack = track
+
+        basePlayer = makePlayer(fileName: track.fileName, fileExtension: track.fileExtension)
+        basePlayer?.numberOfLoops = -1
+
+        if wasPlaying {
+            basePlayer?.play()
+            updateIsBasePlaying(true)
+        } else {
+            updateIsBasePlaying(false)
+        }
+    }
+
     /// Plays the sound associated with a specific portrait area.
     func playEffect(_ sound: ElfSound) {
         let player: AVAudioPlayer
@@ -96,7 +143,6 @@ final class AudioManager: ObservableObject {
             player = newPlayer
         }
 
-        // Restart from the beginning on every tap for a crisp, responsive feel.
         player.currentTime = 0
         player.play()
     }
@@ -106,7 +152,6 @@ final class AudioManager: ObservableObject {
     private func configureAudioSession() {
         let session = AVAudioSession.sharedInstance()
         do {
-            // `.mixWithOthers` allows the app to blend with other audio (e.g. system music) if desired.
             try session.setCategory(.playback, mode: .default, options: [.mixWithOthers])
             try session.setActive(true)
         } catch {
@@ -140,4 +185,3 @@ final class AudioManager: ObservableObject {
         }
     }
 }
-

@@ -211,30 +211,27 @@ private struct ArrowButton: View {
 
     var body: some View {
         Button(action: action) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .fill(Color.white)
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .strokeBorder(Color.black, lineWidth: 6)
-
-                Group {
-                    if let img = UIImage(named: "Icona_freccia") {
-                        Image(uiImage: img)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40, height: 40)
-                            .rotationEffect(.degrees(direction == .left ? 180 : 0))
-                    } else {
-                        Image(systemName: direction == .left ? "arrow.left" : "arrow.right")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(.black)
+            Color.clear
+                .frame(width: 120, height: 120)
+                .handDrawnBorder(cornerRadius: 8, lineWidth: 6)
+                .overlay(
+                    Group {
+                        if let img = UIImage(named: "Icona_freccia") {
+                            Image(uiImage: img)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                                .rotationEffect(.degrees(direction == .left ? 180 : 0))
+                        } else {
+                            Image(systemName: direction == .left ? "arrow.left" : "arrow.right")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(.black)
+                        }
                     }
-                }
-            }
+                )
         }
-        .frame(width: 120, height: 120)
         .buttonStyle(.plain)
     }
 }
@@ -262,29 +259,26 @@ struct CreditsView: View {
                             dismiss()
                         } label: {
                             HStack(spacing: 16 * scale) {
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 8 * scale, style: .continuous)
-                                        .fill(Color.white)
-                                    RoundedRectangle(cornerRadius: 8 * scale, style: .continuous)
-                                        .strokeBorder(Color.black, lineWidth: 6 * scale)
-
-                                    Group {
-                                        if let img = UIImage(named: "Icona_freccia") {
-                                            Image(uiImage: img)
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 64 * scale, height: 64 * scale)
-                                                .rotationEffect(.degrees(180))
-                                        } else {
-                                            Image(systemName: "arrow.left")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 64 * scale, height: 64 * scale)
-                                                .foregroundColor(.black)
+                                Color.clear
+                                    .frame(width: 120 * scale, height: 120 * scale)
+                                    .handDrawnBorder(cornerRadius: 8 * scale, lineWidth: 6 * scale)
+                                    .overlay(
+                                        Group {
+                                            if let img = UIImage(named: "Icona_freccia") {
+                                                Image(uiImage: img)
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 64 * scale, height: 64 * scale)
+                                                    .rotationEffect(.degrees(180))
+                                            } else {
+                                                Image(systemName: "arrow.left")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 64 * scale, height: 64 * scale)
+                                                    .foregroundColor(.black)
+                                            }
                                         }
-                                    }
-                                }
-                                .frame(width: 120 * scale, height: 120 * scale)
+                                    )
 
                                 Text("Indietro")
                                     .font(.quicksandMedium(32 * scale))

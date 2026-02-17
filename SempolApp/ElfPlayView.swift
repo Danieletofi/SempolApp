@@ -25,6 +25,7 @@ struct ElfPlayView: View {
     private static let loadedLayout: PortraitLayoutConfig? = Self.loadPortraitLayout()
 
     @State private var activeLayers: Set<String> = []
+    @State private var showMusicArchive: Bool = false
 
     var body: some View {
         ZStack {
@@ -57,6 +58,9 @@ struct ElfPlayView: View {
         }
         .onAppear {
             audioManager.startBaseIfNeeded()
+        }
+        .fullScreenCover(isPresented: $showMusicArchive) {
+            MusicArchiveView()
         }
         .navigationBarBackButtonHidden(true)
     }
@@ -205,40 +209,37 @@ struct ElfPlayView: View {
     private var bottomControlBar: some View {
         HStack {
             HStack(spacing: 16) {
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .strokeBorder(Color.black, lineWidth: 6)
-                    .background(
-                        RoundedRectangle(cornerRadius: 8, style: .continuous)
-                            .fill(Color.white)
-                    )
-                    .frame(width: 120, height: 120)
-                    .overlay(
-                        Group {
-                            if let image = UIImage(named: "Icona_traccia") {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 56, height: 56)
-                            } else {
-                                Image(systemName: "music.note.list")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 56, height: 56)
-                                    .foregroundColor(.black)
+                Button {
+                    showMusicArchive = true
+                } label: {
+                    Color.clear
+                        .frame(width: 120, height: 120)
+                        .handDrawnBorder(cornerRadius: 8, lineWidth: 6)
+                        .overlay(
+                            Group {
+                                if let image = UIImage(named: "Icona_traccia") {
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 56, height: 56)
+                                } else {
+                                    Image(systemName: "music.note.list")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 56, height: 56)
+                                        .foregroundColor(.black)
+                                }
                             }
-                        }
-                    )
+                        )
+                }
+                .buttonStyle(.plain)
 
                 Button {
                     audioManager.toggleBase()
                 } label: {
-                    RoundedRectangle(cornerRadius: 8, style: .continuous)
-                        .strokeBorder(Color.black, lineWidth: 6)
-                        .background(
-                            RoundedRectangle(cornerRadius: 8, style: .continuous)
-                                .fill(Color.white)
-                        )
+                    Color.clear
                         .frame(width: 120, height: 120)
+                        .handDrawnBorder(cornerRadius: 8, lineWidth: 6)
                         .overlay(
                             Group {
                                 if audioManager.isBasePlaying {
@@ -279,13 +280,9 @@ struct ElfPlayView: View {
             Button {
                 dismiss()
             } label: {
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .strokeBorder(Color.black, lineWidth: 6)
-                    .background(
-                        RoundedRectangle(cornerRadius: 8, style: .continuous)
-                            .fill(Color.white)
-                    )
+                Color.clear
                     .frame(width: 120, height: 120)
+                    .handDrawnBorder(cornerRadius: 8, lineWidth: 6)
                     .overlay(
                         Group {
                             if let image = UIImage(named: "Icona_card") {
