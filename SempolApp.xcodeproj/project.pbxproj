@@ -46,6 +46,8 @@
 		A13EF7C8FF5474BCDB04234 /* suono-elfo-occhio-dx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A6F9C47CD03C140FEA40F12 /* suono-elfo-occhio-dx.mp3 */; };
 		AEF2A8C1DCBBE433CAA2F1E /* suono-elfo-naso.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5CC80A43D0D1458AA0E24A /* suono-elfo-naso.mp3 */; };
 		A33DEEABB9B0649C38993F0 /* Downtown-base.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A2D8240D62E584C1483F801 /* Downtown-base.mp3 */; };
+		B0000001ORCOWAV00000BLD /* base_orco.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0000002ORCOWAV00000REF /* base_orco.wav */; };
+		B0000001GREMWAV00000BLD /* base_gremlin.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0000002GREMWAV00000REF /* base_gremlin.wav */; };
 		AA000001ASSETS /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000002ASSETS /* Assets.xcassets */; };
 		P000001LAYOUT /* PortraitLayout.json in Resources */ = {isa = PBXBuildFile; fileRef = P000002LAYOUT /* PortraitLayout.json */; };
 		H0000001ELFO /* card-ritratto-Elfo.png in Resources */ = {isa = PBXBuildFile; fileRef = H0000002ELFO /* card-ritratto-Elfo.png */; };
@@ -105,6 +107,8 @@
 		A6F9C47CD03C140FEA40F12 /* suono-elfo-occhio-dx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "suono-elfo-occhio-dx.mp3"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_elfo/suono-elfo-occhio-dx.mp3"; sourceTree = "<group>"; };
 		A5CC80A43D0D1458AA0E24A /* suono-elfo-naso.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "suono-elfo-naso.mp3"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_elfo/suono-elfo-naso.mp3"; sourceTree = "<group>"; };
 		A2D8240D62E584C1483F801 /* Downtown-base.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Downtown-base.mp3"; path = "Suoni/Basi_musicali/Downtown-base.mp3"; sourceTree = "<group>"; };
+		B0000002ORCOWAV00000REF /* base_orco.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "base_orco.wav"; path = "Suoni/Basi_musicali/base_orco.wav"; sourceTree = "<group>"; };
+		B0000002GREMWAV00000REF /* base_gremlin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "base_gremlin.wav"; path = "Suoni/Basi_musicali/base_gremlin.wav"; sourceTree = "<group>"; };
 
 
 		A1000002 /* SempolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SempolApp.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				A6F9C47CD03C140FEA40F12 /* suono-elfo-occhio-dx.mp3 */,
 				A5CC80A43D0D1458AA0E24A /* suono-elfo-naso.mp3 */,
 				A2D8240D62E584C1483F801 /* Downtown-base.mp3 */,
+				B0000002ORCOWAV00000REF /* base_orco.wav */,
+				B0000002GREMWAV00000REF /* base_gremlin.wav */,
 				H0000002ELFO /* card-ritratto-Elfo.png */,
 				H0000004GREM /* card-ritratto-Gremlin.png */,
 				H0000006ORCO /* card-ritratto-Orco.png */,
@@ -318,6 +324,8 @@
 				A13EF7C8FF5474BCDB04234 /* suono-elfo-occhio-dx.mp3 in Resources */,
 				AEF2A8C1DCBBE433CAA2F1E /* suono-elfo-naso.mp3 in Resources */,
 				A33DEEABB9B0649C38993F0 /* Downtown-base.mp3 in Resources */,
+				B0000001ORCOWAV00000BLD /* base_orco.wav in Resources */,
+				B0000001GREMWAV00000BLD /* base_gremlin.wav in Resources */,
 				AA000001ASSETS /* Assets.xcassets in Resources */,
 				P000001LAYOUT /* PortraitLayout.json in Resources */,
 				H0000001ELFO /* card-ritratto-Elfo.png in Resources */,

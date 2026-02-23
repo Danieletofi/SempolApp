@@ -19,7 +19,7 @@ struct MusicArchiveView: View {
 
                     // Track list
                     ScrollView(.vertical, showsIndicators: false) {
-                        VStack(spacing: 24 * scale) {
+                        VStack(spacing: 0) {
                             ForEach(audioManager.availableTracks) { track in
                                 let isActive = track == audioManager.currentTrack
                                 TrackRow(
@@ -31,8 +31,7 @@ struct MusicArchiveView: View {
                                 }
                             }
                         }
-                        .padding(.horizontal, 40 * scale)
-                        .padding(.top, 24 * scale)
+                        .padding(.horizontal, 24 * scale)
                         .padding(.bottom, 60 * scale)
                     }
                 }
@@ -83,12 +82,30 @@ struct MusicArchiveView: View {
             .padding(.leading, 16 * scale)
             .padding(.top, 24 * scale)
 
-            // Title
-            Text("Archivio Musica")
-                .font(.quicksandMedium(40 * scale))
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding(.bottom, 16 * scale)
+            // Hero: icon + title
+            VStack(spacing: 16 * scale) {
+                if let img = UIImage(named: "Icona_traccia") {
+                    Image(uiImage: img)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 64 * scale, height: 64 * scale)
+                } else {
+                    Image(systemName: "music.note")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 64 * scale, height: 64 * scale)
+                        .foregroundColor(.black)
+                }
+
+                Text("Archivio Musica")
+                    .font(.cherryBombOne(120 * scale))
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(-120 * scale * 0.2)
+                    .minimumScaleFactor(0.5)
+            }
+            .frame(maxWidth: .infinity, alignment: .center)
+            .padding(.vertical, 40 * scale)
         }
     }
 }
@@ -103,78 +120,38 @@ private struct TrackRow: View {
 
     var body: some View {
         Button(action: onTap) {
-            HStack(spacing: 24 * scale) {
-                // State icon: pausa if active (playing), play if inactive
+            HStack(spacing: 8 * scale) {
+                // Radio button: filled circle when selected, stroke-only when not
                 ZStack {
-                    RoundedRectangle(cornerRadius: 12 * scale, style: .continuous)
-                        .fill(Color.white)
-                    RoundedRectangle(cornerRadius: 12 * scale, style: .continuous)
-                        .strokeBorder(Color.black, lineWidth: isActive ? 5 * scale : 3 * scale)
-
-                    Group {
-                        if isActive {
-                            if let img = UIImage(named: "Icona_pausa") {
-                                Image(uiImage: img)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 40 * scale, height: 40 * scale)
-                            } else {
-                                Image(systemName: "pause.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 32 * scale, height: 32 * scale)
-                                    .foregroundColor(.black)
-                            }
-                        } else {
-                            if let img = UIImage(named: "Icona_play") {
-                                Image(uiImage: img)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 40 * scale, height: 40 * scale)
-                            } else {
-                                Image(systemName: "play.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 32 * scale, height: 32 * scale)
-                                    .foregroundColor(.black)
-                            }
-                        }
+                    if isActive {
+                        Circle()
+                            .fill(Color.black)
+                    } else {
+                        Circle()
+                            .strokeBorder(Color.black, lineWidth: 2 * scale)
                     }
                 }
-                .frame(width: 80 * scale, height: 80 * scale)
+                .frame(width: 48 * scale, height: 48 * scale)
 
-                // Track title
                 Text(track.title)
-                    .font(.quicksandMedium(isActive ? 36 * scale : 32 * scale))
+                    .font(.quicksandMedium(22 * scale))
                     .foregroundColor(.black)
                     .lineLimit(1)
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
-                Spacer(minLength: 0)
-
-                // Active indicator tag
-                if isActive {
-                    Text("In riproduzione")
-                        .font(.quicksandMedium(16 * scale))
-                        .foregroundColor(.black)
-                        .padding(.horizontal, 16 * scale)
-                        .padding(.vertical, 8 * scale)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8 * scale, style: .continuous)
-                                .strokeBorder(Color.black, lineWidth: 3 * scale)
-                        )
-                }
+                Text(track.genre)
+                    .font(.quicksandMedium(22 * scale))
+                    .foregroundColor(.black)
+                    .lineLimit(1)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(.horizontal, 24 * scale)
-            .padding(.vertical, 16 * scale)
-            .background(
-                RoundedRectangle(cornerRadius: 16 * scale, style: .continuous)
-                    .fill(Color.white)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: 16 * scale, style: .continuous)
-                    .strokeBorder(Color.black, lineWidth: isActive ? 6 * scale : 3 * scale)
-            )
+            .padding(.vertical, 24 * scale)
         }
         .buttonStyle(.plain)
+        .overlay(alignment: .bottom) {
+            Rectangle()
+                .fill(Color.black)
+                .frame(height: 4 * scale)
+        }
     }
 }

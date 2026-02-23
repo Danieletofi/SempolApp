@@ -6,15 +6,16 @@ import AVFoundation
 struct MusicTrack: Identifiable, Equatable {
     let id: String
     let title: String
+    let genre: String
     let fileName: String
     let fileExtension: String
 }
 
 extension MusicTrack {
     static let allTracks: [MusicTrack] = [
-        .init(id: "downtown-base", title: "Downtown", fileName: "Downtown-base", fileExtension: "mp3"),
-        .init(id: "sunset-vibes", title: "Sunset Vibes", fileName: "Sunset-vibes", fileExtension: "mp3"),
-        .init(id: "forest-walk", title: "Forest Walk", fileName: "Forest-walk", fileExtension: "mp3")
+        .init(id: "downtown-base", title: "Downtown", genre: "Classic HipHop", fileName: "Downtown-base", fileExtension: "mp3"),
+        .init(id: "sunset-vibes", title: "Sunset Vibes", genre: "Lo-fi Beats", fileName: "base_orco", fileExtension: "wav"),
+        .init(id: "forest-walk", title: "Forest Walk", genre: "Ambient", fileName: "base_gremlin", fileExtension: "wav")
     ]
 
     static let defaultTrack = allTracks[0]
@@ -107,11 +108,9 @@ final class AudioManager: ObservableObject {
         }
     }
 
-    /// Select and switch to a different base track.
+    /// Select and switch to a different base track. Always starts playback immediately.
     func selectTrack(_ track: MusicTrack) {
         guard track != currentTrack else { return }
-
-        let wasPlaying = basePlayer?.isPlaying ?? false
 
         basePlayer?.stop()
         basePlayer = nil
@@ -120,13 +119,8 @@ final class AudioManager: ObservableObject {
 
         basePlayer = makePlayer(fileName: track.fileName, fileExtension: track.fileExtension)
         basePlayer?.numberOfLoops = -1
-
-        if wasPlaying {
-            basePlayer?.play()
-            updateIsBasePlaying(true)
-        } else {
-            updateIsBasePlaying(false)
-        }
+        basePlayer?.play()
+        updateIsBasePlaying(true)
     }
 
     /// Plays the sound associated with a specific portrait area.
