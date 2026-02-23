@@ -1,0 +1,14 @@
+{
+  "canvasWidth": 1024,
+  "canvasHeight": 1366,
+  "layers": [
+    { "name": "card_3_base",          "x": 26,  "y": 16,  "width": 971, "height": 1334 },
+    { "name": "card_3_orecchio_sx",   "x": 27,  "y": 588, "width": 211, "height": 239 },
+    { "name": "card_3_orecchio_dx",   "x": 787, "y": 488, "width": 222, "height": 438 },
+    { "name": "card_3_occhio_sx",     "x": 255, "y": 552, "width": 170, "height": 192 },
+    { "name": "card_3_occhio_sopra",  "x": 427, "y": 419, "width": 170, "height": 192 },
+    { "name": "card_3_occhio_dx",     "x": 616, "y": 538, "width": 170, "height": 192 },
+    { "name": "card_3_naso",          "x": 442, "y": 714, "width": 137, "height": 138 },
+    { "name": "card_3_bocca",         "x": 389, "y": 894, "width": 236, "height": 159 }
+  ]
+}

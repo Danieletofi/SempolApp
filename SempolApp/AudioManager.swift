@@ -21,37 +21,62 @@ extension MusicTrack {
     static let defaultTrack = allTracks[0]
 }
 
-// MARK: - Elf Sound enum
+// MARK: - Character Configuration
 
-/// Identifies each tappable part of the elf portrait.
-enum ElfSound: CaseIterable {
-    case capelli
-    case orecchioSinistro
-    case orecchioDestro
-    case occhioSinistro
-    case occhioDestro
-    case naso
-    case bocca
+struct SoundFile {
+    let fileName: String
+    let fileExtension: String
+}
 
-    /// The exact filename (without extension) for each sound in `Suoni_ritratto_elfo`.
-    var fileName: String {
-        switch self {
-        case .capelli:
-            return "suono-elfo-capelli"
-        case .orecchioSinistro:
-            return "suono-elfo-orecchio-sx"
-        case .orecchioDestro:
-            return "suono-elfo-orecchio-dx"
-        case .occhioSinistro:
-            return "suono-elfo-occhio-sx"
-        case .occhioDestro:
-            return "suono-elfo-occhio-dx"
-        case .naso:
-            return "suono-elfo-naso"
-        case .bocca:
-            return "suono-elfo-bocca"
-        }
-    }
+struct CharacterConfig {
+    let id: String
+    let layoutFileName: String
+    /// Maps layer names (from the layout JSON) to their sound files.
+    let soundMap: [String: SoundFile]
+}
+
+extension CharacterConfig {
+    static let elf = CharacterConfig(
+        id: "elf",
+        layoutFileName: "PortraitLayout",
+        soundMap: [
+            "card_1_capelli":      SoundFile(fileName: "suono-elfo-capelli",      fileExtension: "mp3"),
+            "card_1_orecchio_sx":  SoundFile(fileName: "suono-elfo-orecchio-sx",  fileExtension: "mp3"),
+            "card_1_orecchio_dx":  SoundFile(fileName: "suono-elfo-orecchio-dx",  fileExtension: "mp3"),
+            "card_1_occhio_sx":    SoundFile(fileName: "suono-elfo-occhio-sx",    fileExtension: "mp3"),
+            "card_1_occhio_dx":    SoundFile(fileName: "suono-elfo-occhio-dx",    fileExtension: "mp3"),
+            "card_1_naso":         SoundFile(fileName: "suono-elfo-naso",         fileExtension: "mp3"),
+            "card_1_bocca":        SoundFile(fileName: "suono-elfo-bocca",        fileExtension: "mp3"),
+        ]
+    )
+
+    static let orc = CharacterConfig(
+        id: "orc",
+        layoutFileName: "OrcPortraitLayout",
+        soundMap: [
+            "card_3_orecchio_sx":  SoundFile(fileName: "suono-orco-orecchio_sx",  fileExtension: "wav"),
+            "card_3_orecchio_dx":  SoundFile(fileName: "suono-orco-orecchio_dx",  fileExtension: "wav"),
+            "card_3_occhio_sx":    SoundFile(fileName: "suono-orco-occhio_sx",    fileExtension: "wav"),
+            "card_3_occhio_sopra": SoundFile(fileName: "suono-orco-occhiosopra",  fileExtension: "wav"),
+            "card_3_occhio_dx":    SoundFile(fileName: "suono-orco-occhio_dx",    fileExtension: "wav"),
+            "card_3_naso":         SoundFile(fileName: "suono-orco-naso",         fileExtension: "wav"),
+            "card_3_bocca":        SoundFile(fileName: "suono-orco-bocca",        fileExtension: "wav"),
+        ]
+    )
+
+    static let gremlin = CharacterConfig(
+        id: "gremlin",
+        layoutFileName: "GremlinPortraitLayout",
+        soundMap: [
+            "card_2_ciglio":       SoundFile(fileName: "suoni_gremlin_ciglio",      fileExtension: "wav"),
+            "card_2_orecchio_sx":  SoundFile(fileName: "suoni_gremlin_orecchio_sx", fileExtension: "wav"),
+            "card_2_orecchio_dx":  SoundFile(fileName: "suoni_gremlin_orecchio_dx", fileExtension: "wav"),
+            "card_2_occhio_sx":    SoundFile(fileName: "suoni_gremlin_occhio_sx",   fileExtension: "wav"),
+            "card_2_occhio_dx":    SoundFile(fileName: "suoni_gremlin_occhio_dx",   fileExtension: "wav"),
+            "card_2_naso":         SoundFile(fileName: "suoni_gremlin_naso",        fileExtension: "wav"),
+            "card_2_bocca":        SoundFile(fileName: "suoni_gremlin_bocca",       fileExtension: "wav"),
+        ]
+    )
 }
 
 // MARK: - Audio Manager
@@ -70,7 +95,7 @@ final class AudioManager: ObservableObject {
     // MARK: - Private properties
 
     private var basePlayer: AVAudioPlayer?
-    private var effectPlayers: [ElfSound: AVAudioPlayer] = [:]
+    private var effectPlayers: [String: AVAudioPlayer] = [:]
 
     private init() {
         configureAudioSession()
@@ -123,22 +148,29 @@ final class AudioManager: ObservableObject {
         updateIsBasePlaying(true)
     }
 
-    /// Plays the sound associated with a specific portrait area.
-    func playEffect(_ sound: ElfSound) {
+    /// Plays a sound effect by file name and extension. Players are cached by key.
+    func playSoundEffect(fileName: String, fileExtension: String) {
+        let key = "\(fileName).\(fileExtension)"
         let player: AVAudioPlayer
 
-        if let existing = effectPlayers[sound] {
+        if let existing = effectPlayers[key] {
             player = existing
         } else {
-            guard let newPlayer = makePlayer(fileName: sound.fileName, fileExtension: "mp3") else {
+            guard let newPlayer = makePlayer(fileName: fileName, fileExtension: fileExtension) else {
                 return
             }
-            effectPlayers[sound] = newPlayer
+            effectPlayers[key] = newPlayer
             player = newPlayer
         }
 
         player.currentTime = 0
         player.play()
+    }
+
+    /// Convenience: play a sound from a CharacterConfig's soundMap for a given layer name.
+    func playEffect(forLayer layerName: String, config: CharacterConfig) {
+        guard let sound = config.soundMap[layerName] else { return }
+        playSoundEffect(fileName: sound.fileName, fileExtension: sound.fileExtension)
     }
 
     // MARK: - Private helpers

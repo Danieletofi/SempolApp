@@ -50,6 +50,22 @@
 		B0000001GREMWAV00000BLD /* base_gremlin.wav in Resources */ = {isa = PBXBuildFile; fileRef = B0000002GREMWAV00000REF /* base_gremlin.wav */; };
 		AA000001ASSETS /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000002ASSETS /* Assets.xcassets */; };
 		P000001LAYOUT /* PortraitLayout.json in Resources */ = {isa = PBXBuildFile; fileRef = P000002LAYOUT /* PortraitLayout.json */; };
+		ORC01LAYOUT0B /* OrcPortraitLayout.json in Resources */ = {isa = PBXBuildFile; fileRef = ORC02LAYOUT0R /* OrcPortraitLayout.json */; };
+		GRM01LAYOUT0B /* GremlinPortraitLayout.json in Resources */ = {isa = PBXBuildFile; fileRef = GRM02LAYOUT0R /* GremlinPortraitLayout.json */; };
+		ORC01ORECSX0B /* suono-orco-orecchio_sx.wav in Resources */ = {isa = PBXBuildFile; fileRef = ORC02ORECSX0R /* suono-orco-orecchio_sx.wav */; };
+		ORC01ORECDX0B /* suono-orco-orecchio_dx.wav in Resources */ = {isa = PBXBuildFile; fileRef = ORC02ORECDX0R /* suono-orco-orecchio_dx.wav */; };
+		ORC01OCCHSX0B /* suono-orco-occhio_sx.wav in Resources */ = {isa = PBXBuildFile; fileRef = ORC02OCCHSX0R /* suono-orco-occhio_sx.wav */; };
+		ORC01OCCHSO0B /* suono-orco-occhiosopra.wav in Resources */ = {isa = PBXBuildFile; fileRef = ORC02OCCHSO0R /* suono-orco-occhiosopra.wav */; };
+		ORC01OCCHDX0B /* suono-orco-occhio_dx.wav in Resources */ = {isa = PBXBuildFile; fileRef = ORC02OCCHDX0R /* suono-orco-occhio_dx.wav */; };
+		ORC01NASO000B /* suono-orco-naso.wav in Resources */ = {isa = PBXBuildFile; fileRef = ORC02NASO000R /* suono-orco-naso.wav */; };
+		ORC01BOCCA00B /* suono-orco-bocca.wav in Resources */ = {isa = PBXBuildFile; fileRef = ORC02BOCCA00R /* suono-orco-bocca.wav */; };
+		GRM01CIGLIO0B /* suoni_gremlin_ciglio.wav in Resources */ = {isa = PBXBuildFile; fileRef = GRM02CIGLIO0R /* suoni_gremlin_ciglio.wav */; };
+		GRM01ORECSX0B /* suoni_gremlin_orecchio_sx.wav in Resources */ = {isa = PBXBuildFile; fileRef = GRM02ORECSX0R /* suoni_gremlin_orecchio_sx.wav */; };
+		GRM01ORECDX0B /* suoni_gremlin_orecchio_dx.wav in Resources */ = {isa = PBXBuildFile; fileRef = GRM02ORECDX0R /* suoni_gremlin_orecchio_dx.wav */; };
+		GRM01OCCHSX0B /* suoni_gremlin_occhio_sx.wav in Resources */ = {isa = PBXBuildFile; fileRef = GRM02OCCHSX0R /* suoni_gremlin_occhio_sx.wav */; };
+		GRM01OCCHDX0B /* suoni_gremlin_occhio_dx.wav in Resources */ = {isa = PBXBuildFile; fileRef = GRM02OCCHDX0R /* suoni_gremlin_occhio_dx.wav */; };
+		GRM01NASO000B /* suoni_gremlin_naso.wav in Resources */ = {isa = PBXBuildFile; fileRef = GRM02NASO000R /* suoni_gremlin_naso.wav */; };
+		GRM01BOCCA00B /* suoni_gremlin_bocca.wav in Resources */ = {isa = PBXBuildFile; fileRef = GRM02BOCCA00R /* suoni_gremlin_bocca.wav */; };
 		H0000001ELFO /* card-ritratto-Elfo.png in Resources */ = {isa = PBXBuildFile; fileRef = H0000002ELFO /* card-ritratto-Elfo.png */; };
 		H0000003GREM /* card-ritratto-Gremlin.png in Resources */ = {isa = PBXBuildFile; fileRef = H0000004GREM /* card-ritratto-Gremlin.png */; };
 		H0000005ORCO /* card-ritratto-Orco.png in Resources */ = {isa = PBXBuildFile; fileRef = H0000006ORCO /* card-ritratto-Orco.png */; };
@@ -61,7 +77,7 @@
 		F0000005FONT /* Font+AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000006FONT /* Font+AppFonts.swift */; };
 		A1000003 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000004 /* RootView.swift */; };
 		A1000005 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000006 /* HomeView.swift */; };
-		A1000007 /* ElfPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000008 /* ElfPlayView.swift */; };
+		A1000007 /* PortraitPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000008 /* PortraitPlayView.swift */; };
 		A1000009 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000010 /* AudioManager.swift */; };
 		M0000001MARC /* MusicArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = M0000002MARC /* MusicArchiveView.swift */; };
 		H0000011HDSH /* HandDrawnShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = H0000012HDSH /* HandDrawnShape.swift */; };
@@ -114,11 +130,27 @@
 		A1000002 /* SempolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SempolApp.swift; sourceTree = "<group>"; };
 		A1000004 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A1000006 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		A1000008 /* ElfPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElfPlayView.swift; sourceTree = "<group>"; };
+		A1000008 /* PortraitPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitPlayView.swift; sourceTree = "<group>"; };
 		A1000010 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		A1000011 /* SempolApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SempolApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA000002ASSETS /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		P000002LAYOUT /* PortraitLayout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PortraitLayout.json; sourceTree = "<group>"; };
+		ORC02LAYOUT0R /* OrcPortraitLayout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = OrcPortraitLayout.json; sourceTree = "<group>"; };
+		GRM02LAYOUT0R /* GremlinPortraitLayout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GremlinPortraitLayout.json; sourceTree = "<group>"; };
+		ORC02ORECSX0R /* suono-orco-orecchio_sx.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suono-orco-orecchio_sx.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_orco/suono-orco-orecchio_sx.wav"; sourceTree = "<group>"; };
+		ORC02ORECDX0R /* suono-orco-orecchio_dx.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suono-orco-orecchio_dx.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_orco/suono-orco-orecchio_dx.wav"; sourceTree = "<group>"; };
+		ORC02OCCHSX0R /* suono-orco-occhio_sx.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suono-orco-occhio_sx.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_orco/suono-orco-occhio_sx.wav"; sourceTree = "<group>"; };
+		ORC02OCCHSO0R /* suono-orco-occhiosopra.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suono-orco-occhiosopra.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_orco/suono-orco-occhiosopra.wav"; sourceTree = "<group>"; };
+		ORC02OCCHDX0R /* suono-orco-occhio_dx.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suono-orco-occhio_dx.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_orco/suono-orco-occhio_dx.wav"; sourceTree = "<group>"; };
+		ORC02NASO000R /* suono-orco-naso.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suono-orco-naso.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_orco/suono-orco-naso.wav"; sourceTree = "<group>"; };
+		ORC02BOCCA00R /* suono-orco-bocca.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suono-orco-bocca.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_orco/suono-orco-bocca.wav"; sourceTree = "<group>"; };
+		GRM02CIGLIO0R /* suoni_gremlin_ciglio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suoni_gremlin_ciglio.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_gremlin/suoni_gremlin_ciglio.wav"; sourceTree = "<group>"; };
+		GRM02ORECSX0R /* suoni_gremlin_orecchio_sx.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suoni_gremlin_orecchio_sx.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_gremlin/suoni_gremlin_orecchio_sx.wav"; sourceTree = "<group>"; };
+		GRM02ORECDX0R /* suoni_gremlin_orecchio_dx.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suoni_gremlin_orecchio_dx.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_gremlin/suoni_gremlin_orecchio_dx.wav"; sourceTree = "<group>"; };
+		GRM02OCCHSX0R /* suoni_gremlin_occhio_sx.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suoni_gremlin_occhio_sx.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_gremlin/suoni_gremlin_occhio_sx.wav"; sourceTree = "<group>"; };
+		GRM02OCCHDX0R /* suoni_gremlin_occhio_dx.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suoni_gremlin_occhio_dx.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_gremlin/suoni_gremlin_occhio_dx.wav"; sourceTree = "<group>"; };
+		GRM02NASO000R /* suoni_gremlin_naso.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suoni_gremlin_naso.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_gremlin/suoni_gremlin_naso.wav"; sourceTree = "<group>"; };
+		GRM02BOCCA00R /* suoni_gremlin_bocca.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "suoni_gremlin_bocca.wav"; path = "Suoni/Suoni-card-ritratto/Suoni_ritratto_gremlin/suoni_gremlin_bocca.wav"; sourceTree = "<group>"; };
 		H0000002ELFO /* card-ritratto-Elfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-ritratto-Elfo.png"; path = "Asset/Card_preview/card-ritratto-Elfo.png"; sourceTree = "<group>"; };
 		H0000004GREM /* card-ritratto-Gremlin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-ritratto-Gremlin.png"; path = "Asset/Card_preview/card-ritratto-Gremlin.png"; sourceTree = "<group>"; };
 		H0000006ORCO /* card-ritratto-Orco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "card-ritratto-Orco.png"; path = "Asset/Card_preview/card-ritratto-Orco.png"; sourceTree = "<group>"; };
@@ -165,6 +197,22 @@
 				M0000002MARC /* MusicArchiveView.swift */,
 				H0000012HDSH /* HandDrawnShape.swift */,
 				P000002LAYOUT /* PortraitLayout.json */,
+				ORC02LAYOUT0R /* OrcPortraitLayout.json */,
+				GRM02LAYOUT0R /* GremlinPortraitLayout.json */,
+				ORC02ORECSX0R /* suono-orco-orecchio_sx.wav */,
+				ORC02ORECDX0R /* suono-orco-orecchio_dx.wav */,
+				ORC02OCCHSX0R /* suono-orco-occhio_sx.wav */,
+				ORC02OCCHSO0R /* suono-orco-occhiosopra.wav */,
+				ORC02OCCHDX0R /* suono-orco-occhio_dx.wav */,
+				ORC02NASO000R /* suono-orco-naso.wav */,
+				ORC02BOCCA00R /* suono-orco-bocca.wav */,
+				GRM02CIGLIO0R /* suoni_gremlin_ciglio.wav */,
+				GRM02ORECSX0R /* suoni_gremlin_orecchio_sx.wav */,
+				GRM02ORECDX0R /* suoni_gremlin_orecchio_dx.wav */,
+				GRM02OCCHSX0R /* suoni_gremlin_occhio_sx.wav */,
+				GRM02OCCHDX0R /* suoni_gremlin_occhio_dx.wav */,
+				GRM02NASO000R /* suoni_gremlin_naso.wav */,
+				GRM02BOCCA00R /* suoni_gremlin_bocca.wav */,
 				A31726735ABFC45D4A16DC8 /* card_2_ciglio.png */,
 				AEA440063917E4BF587EAA2 /* card_2_bocca.png */,
 				A512868DBDED94A78A217EA /* card_2_orecchio_dx.png */,
@@ -328,6 +376,22 @@
 				B0000001GREMWAV00000BLD /* base_gremlin.wav in Resources */,
 				AA000001ASSETS /* Assets.xcassets in Resources */,
 				P000001LAYOUT /* PortraitLayout.json in Resources */,
+				ORC01LAYOUT0B /* OrcPortraitLayout.json in Resources */,
+				GRM01LAYOUT0B /* GremlinPortraitLayout.json in Resources */,
+				ORC01ORECSX0B /* suono-orco-orecchio_sx.wav in Resources */,
+				ORC01ORECDX0B /* suono-orco-orecchio_dx.wav in Resources */,
+				ORC01OCCHSX0B /* suono-orco-occhio_sx.wav in Resources */,
+				ORC01OCCHSO0B /* suono-orco-occhiosopra.wav in Resources */,
+				ORC01OCCHDX0B /* suono-orco-occhio_dx.wav in Resources */,
+				ORC01NASO000B /* suono-orco-naso.wav in Resources */,
+				ORC01BOCCA00B /* suono-orco-bocca.wav in Resources */,
+				GRM01CIGLIO0B /* suoni_gremlin_ciglio.wav in Resources */,
+				GRM01ORECSX0B /* suoni_gremlin_orecchio_sx.wav in Resources */,
+				GRM01ORECDX0B /* suoni_gremlin_orecchio_dx.wav in Resources */,
+				GRM01OCCHSX0B /* suoni_gremlin_occhio_sx.wav in Resources */,
+				GRM01OCCHDX0B /* suoni_gremlin_occhio_dx.wav in Resources */,
+				GRM01NASO000B /* suoni_gremlin_naso.wav in Resources */,
+				GRM01BOCCA00B /* suoni_gremlin_bocca.wav in Resources */,
 				H0000001ELFO /* card-ritratto-Elfo.png in Resources */,
 				H0000003GREM /* card-ritratto-Gremlin.png in Resources */,
 				H0000005ORCO /* card-ritratto-Orco.png in Resources */,

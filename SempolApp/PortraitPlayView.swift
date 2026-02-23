@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-// MARK: - Portrait layout (canvas 1024×1366, layer bounds from Figma/config)
+// MARK: - Portrait layout (canvas 1024x1366, layer bounds from Figma/config)
 
 struct PortraitLayerLayout: Codable {
     var name: String
@@ -17,38 +17,37 @@ struct PortraitLayoutConfig: Codable {
     var layers: [PortraitLayerLayout]
 }
 
-/// Main play screen for the Elf portrait (Sampol/card-play/Elfo).
-struct ElfPlayView: View {
+/// Generic play screen for any character portrait.
+struct PortraitPlayView: View {
+    let config: CharacterConfig
+
     @StateObject private var audioManager = AudioManager.shared
     @Environment(\.dismiss) private var dismiss
 
-    private static let loadedLayout: PortraitLayoutConfig? = Self.loadPortraitLayout()
-
     @State private var activeLayers: Set<String> = []
     @State private var showMusicArchive: Bool = false
+
+    private var layout: PortraitLayoutConfig? {
+        Self.loadPortraitLayout(named: config.layoutFileName)
+    }
 
     var body: some View {
         ZStack {
             Color.white
                 .ignoresSafeArea()
 
-            // Portrait fills entire screen; controller overlays bottom
             GeometryReader { geometry in
-                let viewRect = Self.portraitViewRect(in: geometry.size, layout: Self.loadedLayout)
+                let viewRect = Self.portraitViewRect(in: geometry.size, layout: layout)
                 ZStack {
-                    if let layout = Self.loadedLayout {
+                    if let layout {
                         PortraitLayeredView(layout: layout, viewSize: viewRect.size, activeLayers: activeLayers)
                             .frame(width: viewRect.width, height: viewRect.height)
                             .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                         tappableAreasFromLayout(layout: layout, viewRect: viewRect)
-                    } else {
-                        portraitBackgroundFallback
-                        tappableAreasFallback(in: geometry.size)
                     }
                 }
             }
 
-            // Controller bar overlaid at bottom (Z-elevated, like Figma y=1166/1366)
             VStack {
                 Spacer()
                 bottomControlBar
@@ -67,13 +66,12 @@ struct ElfPlayView: View {
 
     // MARK: - Load layout JSON
 
-    private static func loadPortraitLayout() -> PortraitLayoutConfig? {
-        guard let url = Bundle.main.url(forResource: "PortraitLayout", withExtension: "json"),
+    private static func loadPortraitLayout(named name: String) -> PortraitLayoutConfig? {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "json"),
               let data = try? Data(contentsOf: url) else { return nil }
         return try? JSONDecoder().decode(PortraitLayoutConfig.self, from: data)
     }
 
-    /// Portrait area rect (origin + size) that fits in `size` with canvas aspect ratio.
     private static func portraitViewRect(in size: CGSize, layout: PortraitLayoutConfig?) -> CGRect {
         let cw = layout?.canvasWidth ?? 1024
         let ch = layout?.canvasHeight ?? 1366
@@ -92,34 +90,7 @@ struct ElfPlayView: View {
         return CGRect(x: ox, y: oy, width: viewW, height: viewH)
     }
 
-    // MARK: - Fallback portrait (no layout JSON)
-
-    private var portraitBackgroundFallback: some View {
-        ZStack {
-            portraitLayerImage("card_1_sfondo")
-            portraitLayerImage("card_1_capelli")
-            portraitLayerImage("card_1_orecchio_sx")
-            portraitLayerImage("card_1_orecchio_dx")
-            portraitLayerImage("card_1_occhio_sx")
-            portraitLayerImage("card_1_occhio_dx")
-            portraitLayerImage("card_1_naso")
-            portraitLayerImage("card_1_bocca")
-        }
-        .aspectRatio(1024 / 1366, contentMode: .fit)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-
-    @ViewBuilder
-    private func portraitLayerImage(_ name: String) -> some View {
-        if let image = UIImage(named: name) {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFit()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
-    }
-
-    // MARK: - Tappable areas from layout (canvas coordinates scaled to view)
+    // MARK: - Tappable areas from layout
 
     private func tappableAreasFromLayout(layout: PortraitLayoutConfig, viewRect: CGRect) -> some View {
         let scaleX = viewRect.width / layout.canvasWidth
@@ -129,7 +100,7 @@ struct ElfPlayView: View {
 
         return ZStack {
             ForEach(Array(layout.layers.enumerated()), id: \.offset) { _, layer in
-                if let sound = Self.sound(forLayerName: layer.name) {
+                if config.soundMap[layer.name] != nil {
                     let w = CGFloat(layer.width) * scaleX
                     let h = CGFloat(layer.height) * scaleY
                     let cx = ox + CGFloat(layer.x) * scaleX + w / 2
@@ -142,7 +113,7 @@ struct ElfPlayView: View {
                         centerY: cy,
                         activeLayers: $activeLayers,
                         onTap: {
-                            audioManager.playEffect(sound)
+                            audioManager.playEffect(forLayer: layer.name, config: config)
                             triggerScaleAnimation(for: layer.name)
                         }
                     )
@@ -160,48 +131,6 @@ struct ElfPlayView: View {
                 activeLayers = activeLayers.subtracting([layerName])
             }
         }
-    }
-
-    private static func sound(forLayerName name: String) -> ElfSound? {
-        switch name {
-        case "card_1_capelli": return .capelli
-        case "card_1_orecchio_sx": return .orecchioSinistro
-        case "card_1_orecchio_dx": return .orecchioDestro
-        case "card_1_occhio_sx": return .occhioSinistro
-        case "card_1_occhio_dx": return .occhioDestro
-        case "card_1_naso": return .naso
-        case "card_1_bocca": return .bocca
-        default: return nil
-        }
-    }
-
-    // MARK: - Fallback tappable areas (factor-based)
-
-    private func tappableAreasFallback(in size: CGSize) -> some View {
-        let width = size.width
-        let height = size.height
-        return ZStack {
-            tappableAreaRect(width: width, height: height, widthFactor: 0.75, heightFactor: 0.40, centerXFactor: 0.5, centerYFactor: 0.23, sound: .capelli)
-            tappableAreaRect(width: width, height: height, widthFactor: 0.14, heightFactor: 0.22, centerXFactor: 0.18, centerYFactor: 0.45, sound: .orecchioSinistro)
-            tappableAreaRect(width: width, height: height, widthFactor: 0.14, heightFactor: 0.23, centerXFactor: 0.82, centerYFactor: 0.45, sound: .orecchioDestro)
-            tappableAreaRect(width: width, height: height, widthFactor: 0.10, heightFactor: 0.12, centerXFactor: 0.37, centerYFactor: 0.40, sound: .occhioSinistro)
-            tappableAreaRect(width: width, height: height, widthFactor: 0.10, heightFactor: 0.12, centerXFactor: 0.63, centerYFactor: 0.40, sound: .occhioDestro)
-            tappableAreaRect(width: width, height: height, widthFactor: 0.13, heightFactor: 0.18, centerXFactor: 0.50, centerYFactor: 0.49, sound: .naso)
-            tappableAreaRect(width: width, height: height, widthFactor: 0.45, heightFactor: 0.14, centerXFactor: 0.50, centerYFactor: 0.63, sound: .bocca)
-        }
-    }
-
-    private func tappableAreaRect(width: CGFloat, height: CGFloat, widthFactor: CGFloat, heightFactor: CGFloat, centerXFactor: CGFloat, centerYFactor: CGFloat, sound: ElfSound) -> some View {
-        let w = width * widthFactor
-        let h = height * heightFactor
-        let x = width * centerXFactor
-        let y = height * centerYFactor
-        return Rectangle()
-            .fill(Color.clear)
-            .frame(width: w, height: h)
-            .contentShape(Rectangle())
-            .position(x: x, y: y)
-            .onTapGesture { audioManager.playEffect(sound) }
     }
 
     // MARK: - Bottom controls
@@ -333,7 +262,7 @@ private struct TappableLayerArea: View {
     }
 }
 
-// MARK: - Layered portrait view (each layer drawn in its canvas rect)
+// MARK: - Layered portrait view
 
 private struct PortraitLayeredView: View {
     let layout: PortraitLayoutConfig
@@ -369,14 +298,5 @@ private struct PortraitLayeredView: View {
                 .animation(.easeInOut(duration: 0.15), value: isActive)
                 .position(x: centerX, y: centerY)
         }
-    }
-}
-
-struct ElfPlayView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            ElfPlayView()
-        }
-        .previewInterfaceOrientation(.portrait)
     }
 }

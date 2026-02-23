@@ -13,7 +13,13 @@ private struct SempolCard: Identifiable {
     let previewImageName: String
     let rotation: Double
 
-    var isPlayable: Bool { type == .elf }
+    var characterConfig: CharacterConfig {
+        switch type {
+        case .elf: return .elf
+        case .gremlin: return .gremlin
+        case .orc: return .orc
+        }
+    }
 }
 
 // MARK: - HomeView
@@ -126,9 +132,9 @@ struct HomeView: View {
         let scale: CGFloat = isCentered ? 1.0 : 0.92
 
         Group {
-            if card.isPlayable && isCentered {
+            if isCentered {
                 NavigationLink {
-                    ElfPlayView()
+                    PortraitPlayView(config: card.characterConfig)
                 } label: {
                     cardBody(card: card, cardW: cardW, cardH: cardH)
                 }
